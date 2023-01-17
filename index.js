@@ -12,6 +12,8 @@ const authRoute = require("./routes/auth");
 const app = express();
 const secret = "aoisufwerludgukgadlrek";
 
+const port = process.env.PORT || 8080;
+
 app.use(
   cors({
     credentials: true,
@@ -67,25 +69,14 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// app.get("/profile", (req, res) => {
-//   const { token } = req.cookies;
-//   console.log("Profile Called");
-//   jwt.verify(token, secret, {}, (err, info) => {
-//     if (err) {
-//       res.json(err);
-//     }
-//     res.json({ info, cookies: req.cookies });
-//   });
-// });
-
 app.get("/", (req, res) => {
   res.json("hello");
 });
 
-app.listen(4000, (err) => {
+app.listen(port, (err) => {
   if (err) {
     console.log("Error");
   } else {
-    console.log("Server Started on http://localhost:4000/");
+    console.log("Server Started on " + port);
   }
 });
