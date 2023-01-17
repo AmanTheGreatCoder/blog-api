@@ -2,10 +2,9 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const GithubStrategy = require("passport-github2").Strategy;
 const passport = require("passport");
 
-const GOOGLE_CLIENT_ID  =
+const GOOGLE_CLIENT_ID =
   "933240470261-d4fvjtcj6e47c4td60rud6eb5jj5102o.apps.googleusercontent.com";
 const GOOGLE_CLIENT_SECRET = "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";
-
 
 const GITHUB_CLIENT_SECRET = "96b8336e1b3c3074406065dc1abd99b3fe78405c";
 
@@ -32,7 +31,7 @@ passport.use(
     {
       clientID: GITHUB_CLIENT_ID,
       clientSecret: GITHUB_CLIENT_SECRET,
-      callbackURL: "/auth/github/callback",
+      callbackURL: "https://blog-api-3tml.onrender.com/auth/github/callback",
     },
     function (accessToken, refreshToken, profile, callback) {
       // User.findOrCreate({ googleId: profile.id }, function (err, user) {
