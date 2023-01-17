@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const passport = require("passport");
-const CLIENT_URL = "http://localhost:5173";
+const CLIENT_URL = "https://blog-app-ijxe.onrender.com";
 
 router.get("/login/failed", (req, res) => {
   res.status(401).json("login failed");

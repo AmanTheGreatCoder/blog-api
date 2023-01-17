@@ -17,7 +17,7 @@ const port = process.env.PORT || 8080;
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: "https://blog-app-ijxe.onrender.com",
   }),
   express.json(),
   cookieSession({
