@@ -16,7 +16,7 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: "/auth/google/callback",
+      callbackURL: "https://blog-api-3tml.onrender.com/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, callback) {
       // User.findOrCreate({ googleId: profile.id }, function (err, user) {
